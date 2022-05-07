@@ -1,0 +1,1023 @@
+<html
+        xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Jira</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="69">
+            <img src="https://sanel.atlassian.net/images/icon-jira-software-logo.png" width="57" height="30" border="0" alt="Jira">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="69">
+            <a href="https://sanel.atlassian.net/issues/?jql=project+%3D+%22PHPTRAV%22+ORDER+BY+created+DESC">Jira</a>
+        </td>
+    </tr>
+    <tr>
+                <td colspan="69">
+            Displaying <strong>5</strong> issues at <strong>04/May/22 12:37 AM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable" class="aui " border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                                                        Project
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        Issue Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Priority
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Resolution
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Assignee
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Reporter
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                                                        Creator
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Created
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                                                        Last Viewed
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Updated
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                                                        Resolved
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions" data-id="versions">
+                                                        Affects versions
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                                                        Fix versions
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components" data-id="components">
+                                                        Components
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Due date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                                                        Votes
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                                                        Watchers
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                                                        Images
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                                                        Original estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                                                        Remaining Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                                                        Time Spent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                                                        Work Ratio
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                                                        Sub-tasks
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                                                        Linked Issues
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                                                        Environment
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                                                        Description
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                                                        Security Level
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                                                        Progress
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                                                        Σ Progress
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                                                        Σ Time Spent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                                                        Σ Remaining Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                                                        Σ Original Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                                                        Labels
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statuscategorychangedate" data-id="statuscategorychangedate">
+                                                        Status Category Changed
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statusCategory" data-id="statusCategory">
+                                                        Status Category
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-parent" data-id="parent">
+                                                        Parent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10009" data-id="customfield_10009">
+                                                        Actual end
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10008" data-id="customfield_10008">
+                                                        Actual start
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10037" data-id="customfield_10037">
+                                                        Affected services
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10003" data-id="customfield_10003">
+                                                        Approvers
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10007" data-id="customfield_10007">
+                                                        Change reason
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10006" data-id="customfield_10006">
+                                                        Change risk
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10005" data-id="customfield_10005">
+                                                        Change type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10013" data-id="customfield_10013">
+                                                        Epic Color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10014" data-id="customfield_10014">
+                                                        Epic Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10011" data-id="customfield_10011">
+                                                        Epic Name
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10012" data-id="customfield_10012">
+                                                        Epic Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10021" data-id="customfield_10021">
+                                                        Flagged
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10004" data-id="customfield_10004">
+                                                        Impact
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10017" data-id="customfield_10017">
+                                                        Issue color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10002" data-id="customfield_10002">
+                                                        Organizations
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10018" data-id="customfield_10018">
+                                                        Parent Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10019" data-id="customfield_10019">
+                                                        Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10010" data-id="customfield_10010">
+                                                        Request Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10036" data-id="customfield_10036">
+                                                        Request language
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10033" data-id="customfield_10033">
+                                                        Request participants
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10034" data-id="customfield_10034">
+                                                        Satisfaction
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10020" data-id="customfield_10020">
+                                                        Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10015" data-id="customfield_10015">
+                                                        Start date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10028" data-id="customfield_10028">
+                                                        Story Points
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10016" data-id="customfield_10016">
+                                                        Story point estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10023" data-id="customfield_10023">
+                                                        Target end
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10022" data-id="customfield_10022">
+                                                        Target start
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10001" data-id="customfield_10001">
+                                                        Team
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10024" data-id="customfield_10024">
+                                                        [CHART] Date of First Response
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                                                        Development
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10012" rel="10012" data-issuekey="PHPTRAV-5" class="issuerow">
+                                            <td class="project">    PHPtravels
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PHPTRAV-5" href="https://sanel.atlassian.net/browse/PHPTRAV-5">PHPTRAV-5</a>
+</td>
+                                            <td class="summary"><p>
+                User is unable to make reservation for a specific flight.
+    </p>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="assignee">            Sanel Omanovic
+    </td>
+                                            <td class="reporter">            Sanel Omanovic
+    </td>
+                                            <td class="creator">            Sanel Omanovic
+    </td>
+                                            <td class="created"> 04/May/22 12:15 AM </td>
+                                            <td class="lastViewed"> 04/May/22 12:26 AM </td>
+                                            <td class="updated"> 04/May/22 12:26 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    07/May/22
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://sanel.atlassian.net/secure/attachment/10005/php1.jpg">
+            php1.jpg
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate">1200</td>
+                                            <td class="timeestimate">1200</td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">            0%
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Google Chrome, <br/>
+<br/>
+Version 101.0.4951.54 (Official Build) (64-bit)<br/>
+<br/>
+Firefox 78
+  </td>
+                                            <td class="description">      *Prerequisites:*<br/>
+<br/>
+Existing user account. User should be logged in to the page.<br/>
+<br/>
+*Description*:<br/>
+User selects specific round trip fllight for a specific period of time with 1 pasenger and economy class. Afther selecting a specific flight from available flights user proceeds for a booking and payment. By clicking on “Book now“ button “*404 Error* Page not Found“ error message is displayed. <br/>
+<br/>
+*Steps to reproduce:*<br/>
+<br/>
+1.Go to “[https://phptravels.net/|https://phptravels.net/login/failed]“ page.<br/>
+<br/>
+2.Select a flight from Istanbul to Sarajevo, from 06.05.2022 to 09.05.2022 with  1 adults and economy class.<br/>
+<br/>
+2.Select search button.<br/>
+3.Select first flight in the list of available flights and click on Book now button.<br/>
+<br/>
+*Expected result:*<br/>
+User should proceed to a payement method page.<br/>
+<br/>
+*Actual result:*<br/>
+Error message “ button “*404 Error* Page not Found“ is displayed.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     0%
+</td>
+                                            <td class="aggregateprogress">     0%
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate">1200</td>
+                                            <td class="aggregatetimeoriginalestimate">1200</td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 04/May/22 12:15 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10037"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i00027:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10036"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10034"><div class="sd-feedback-rating-column"><span>No permission</span></div></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10011" rel="10011" data-issuekey="PHPTRAV-4" class="issuerow">
+                                            <td class="project">    PHPtravels
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PHPTRAV-4" href="https://sanel.atlassian.net/browse/PHPTRAV-4">PHPTRAV-4</a>
+</td>
+                                            <td class="summary"><p>
+                User is proceeds with reservation with incorrect data.
+    </p>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="assignee">            Sanel Omanovic
+    </td>
+                                            <td class="reporter">            Sanel Omanovic
+    </td>
+                                            <td class="creator">            Sanel Omanovic
+    </td>
+                                            <td class="created"> 03/May/22 11:45 PM </td>
+                                            <td class="lastViewed"> 04/May/22 12:15 AM </td>
+                                            <td class="updated"> 04/May/22 12:25 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    07/May/22
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://sanel.atlassian.net/secure/attachment/10004/php4.jpg">
+            php4.jpg
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate">1200</td>
+                                            <td class="timeestimate">1200</td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">            0%
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Google Chrome, <br/>
+<br/>
+Version 101.0.4951.54 (Official Build) (64-bit)<br/>
+<br/>
+Firefox 78
+  </td>
+                                            <td class="description">      *Prerequisites:*<br/>
+<br/>
+Existing user account. User should be logged in to the page.<br/>
+<br/>
+*Description*:<br/>
+User selects specific hotel for a specific period of time but with 0 rooms 0 adults and 0 childs. At the end user selects payment method and checks “By continuing, you agree to the[  Terms and Condition|https://phptravels.net/terms-of-use]s“. At the end user clicks Confirm Booking button. Afther this a  *“404 Error Page not Found “*<br/>
+<br/>
+*Steps to reproduce:*<br/>
+<br/>
+1.Go to “[https://phptravels.net/|https://phptravels.net/login/failed]“ page.<br/>
+<br/>
+2.Select a hotel in Istanbul, from 06.05.2022 to 07.05.2022 with  0 rooms 0 adults and 0 childs specifics.<br/>
+<br/>
+2.Select search button.<br/>
+3.Select first hotel in the list of available hotels and click on its details information.<br/>
+4.Select a specific room for this period.<br/>
+5.Select “By continuing, you agree to the[  Terms and Condition|https://phptravels.net/terms-of-use]s“ button.<br/>
+<br/>
+6.At the end user click Confirm Booking button.<br/>
+<br/>
+*Expected result:*<br/>
+User should not proceed to the next page. User should be informed that he mismatched some information and did not select proper value for specific elements of reservation.<br/>
+<br/>
+*Actual result:*<br/>
+Error message is displayed  *“404 Error Page not Found “.*
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     0%
+</td>
+                                            <td class="aggregateprogress">     0%
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate">1200</td>
+                                            <td class="aggregatetimeoriginalestimate">1200</td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 03/May/22 11:45 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10037"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i0001z:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10036"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10034"><div class="sd-feedback-rating-column"><span>No permission</span></div></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10010" rel="10010" data-issuekey="PHPTRAV-3" class="issuerow">
+                                            <td class="project">    PHPtravels
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PHPTRAV-3" href="https://sanel.atlassian.net/browse/PHPTRAV-3">PHPTRAV-3</a>
+</td>
+                                            <td class="summary"><p>
+                User is unable to login.
+    </p>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="assignee">            Sanel Omanovic
+    </td>
+                                            <td class="reporter">            Sanel Omanovic
+    </td>
+                                            <td class="creator">            Sanel Omanovic
+    </td>
+                                            <td class="created"> 03/May/22 11:22 PM </td>
+                                            <td class="lastViewed"> 03/May/22 11:45 PM </td>
+                                            <td class="updated"> 04/May/22 12:01 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    07/May/22
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://sanel.atlassian.net/secure/attachment/10002/php3.jpg">
+            php3.jpg
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate">1200</td>
+                                            <td class="timeestimate">1200</td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">            0%
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Google Chrome, <br/>
+<br/>
+Version 101.0.4951.54 (Official Build) (64-bit)<br/>
+<br/>
+Firefox 78
+  </td>
+                                            <td class="description">      *Prerequisites:*<br/>
+<br/>
+Existing user account.<br/>
+<br/>
+*Description*:<br/>
+When trying to log in with previously registered credentials, user is unable to log in on “[https://phptravels.net|https://phptravels.net/login/failed]“ page. Previously user registered himself and login process was successful.<br/>
+<br/>
+*Steps to reproduce:*<br/>
+<br/>
+1.Go to “[https://phptravels.net/login|https://phptravels.net/login/failed]“ page.<br/>
+<br/>
+2.Type in previously registered email adress.<br/>
+3.Type in previously registered password.<br/>
+4.Click on the login button.<br/>
+<br/>
+*Expected result:*<br/>
+User should be logged in successfuly.<br/>
+<br/>
+*Actual result:*<br/>
+User is unable to login. “Wrong credentials. try again\!“ message is displayed.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     0%
+</td>
+                                            <td class="aggregateprogress">     0%
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate">1200</td>
+                                            <td class="aggregatetimeoriginalestimate">1200</td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 03/May/22 11:22 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10037"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i0001r:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10036"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10034"><div class="sd-feedback-rating-column"><span>No permission</span></div></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10009" rel="10009" data-issuekey="PHPTRAV-2" class="issuerow">
+                                            <td class="project">    PHPtravels
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PHPTRAV-2" href="https://sanel.atlassian.net/browse/PHPTRAV-2">PHPTRAV-2</a>
+</td>
+                                            <td class="summary"><p>
+                Selecting a number of childs in hotel reservation.
+    </p>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="assignee">            Sanel Omanovic
+    </td>
+                                            <td class="reporter">            Sanel Omanovic
+    </td>
+                                            <td class="creator">            Sanel Omanovic
+    </td>
+                                            <td class="created"> 03/May/22 10:48 PM </td>
+                                            <td class="lastViewed"> 03/May/22 11:34 PM </td>
+                                            <td class="updated"> 03/May/22 11:28 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    07/May/22
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://sanel.atlassian.net/secure/attachment/10001/PHPBUGonCHILDS.png">
+            PHPBUGonCHILDS.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate">1200</td>
+                                            <td class="timeestimate">1200</td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">            0%
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Google Chrome, <br/>
+<br/>
+Version 101.0.4951.54 (Official Build) (64-bit)<br/>
+<br/>
+Firefox 78
+  </td>
+                                            <td class="description">      *Prerequisites:*<br/>
+<br/>
+Existing user account.<br/>
+<br/>
+*Description*:<br/>
+On home page in Hotels section when clicking on “ - “ (MINUS) button to decrease a number of childs for a hotel reservation, when the numer of childs is 0 it increases it by 1.<br/>
+<br/>
+*Steps to reproduce:*<br/>
+<br/>
+1.Go to Hotels section.<br/>
+<br/>
+2.Select a specific reservation in some hotel.<br/>
+3.Click on the number of Childs.<br/>
+4.Decrease the number of Childs by 1 when the number of adults is set to 0.<br/>
+<br/>
+*Expected result:*<br/>
+The number of Childs should not increase.<br/>
+<br/>
+*Actual result:*<br/>
+The number of Childs increases by one.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     0%
+</td>
+                                            <td class="aggregateprogress">     0%
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate">1200</td>
+                                            <td class="aggregatetimeoriginalestimate">1200</td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 03/May/22 10:48 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10037"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i0001j:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10036"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10034"><div class="sd-feedback-rating-column"><span>No permission</span></div></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10008" rel="10008" data-issuekey="PHPTRAV-1" class="issuerow">
+                                            <td class="project">    PHPtravels
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="PHPTRAV-1" href="https://sanel.atlassian.net/browse/PHPTRAV-1">PHPTRAV-1</a>
+</td>
+                                            <td class="summary"><p>
+                Selecting a number of adults in hotel reservation.
+    </p>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Unresolved</em>
+</td>
+                                            <td class="assignee">            Sanel Omanovic
+    </td>
+                                            <td class="reporter">            Sanel Omanovic
+    </td>
+                                            <td class="creator">            Sanel Omanovic
+    </td>
+                                            <td class="created"> 03/May/22 10:47 PM </td>
+                                            <td class="lastViewed"> 03/May/22 11:08 PM </td>
+                                            <td class="updated"> 03/May/22 11:08 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    07/May/22
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://sanel.atlassian.net/secure/attachment/10000/PHPtravelsBUGonADULTS.png">
+            PHPtravelsBUGonADULTS.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate">1200</td>
+                                            <td class="timeestimate">1200</td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">            0%
+    </td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Google Chrome, <br/>
+<br/>
+Version 101.0.4951.54 (Official Build) (64-bit)<br/>
+<br/>
+Firefox 78
+  </td>
+                                            <td class="description">      *Prerequisites:*<br/>
+<br/>
+Existing user account.<br/>
+<br/>
+*Description*:<br/>
+On home page in Hotels section when clicking on  “ - “ (MINUS)  button to decrease a number of adults for  a hotel reservation, when the numer of adults is 0 it increases it by 1.<br/>
+<br/>
+*Steps to reproduce:*<br/>
+<br/>
+1.Go to Hotels section.<br/>
+<br/>
+2.Select a specific reservation in some hotel.<br/>
+3.Click on the number of adults.<br/>
+4.Decrease the number of adults by 1 when the number of adults is set to 0.<br/>
+<br/>
+*Expected result:*<br/>
+The number of adults should not increase.<br/>
+<br/>
+*Actual result:*<br/>
+The number of adults increases by one.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     0%
+</td>
+                                            <td class="aggregateprogress">     0%
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate">1200</td>
+                                            <td class="aggregatetimeoriginalestimate">1200</td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 03/May/22 10:47 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">To Do</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10037"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i0001b:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10036"></td>
+                                            <td class="customfield_10033"></td>
+                                            <td class="customfield_10034"><div class="sd-feedback-rating-column"><span>No permission</span></div></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="69"><font size="1">
+        Generated at Tue May 03 22:37:33 UTC 2022 by Sanel Omanovic using Jira 1001.0.0-SNAPSHOT#100198-sha1:4037a5ba748cf80e3f011a179d5051e8c85877fd.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>

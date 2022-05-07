@@ -1,0 +1,143 @@
+Card ID,Card Name,Card URL,Card Description,Labels,Members,Due Date,Attachment Count,Attachment Links,Checklist Item Total Count,Checklist Item Completed Count,Vote Count,Comment Count,Last Activity Date,List ID,List Name,Board ID,Board Name,Archived,Status,Risk,Priority,Effort-1/5
+6272f31d0934a22adb54045a,Pinterest problem,https://trello.com/c/xMtCdb5o/7-pinterest-problem,"**Prerequisites: **
+
+Network connection. User should be logged in.
+
+**Description:**
+User navigates to specific page and when clicking on specific support link, that page is not provided.
+
+**Steps to reproduce:**
+
+1.Go to  https://pangaia.com/pages/returns-and-exchanges?_gl=1*1mt8sd6*_ga*MTAzOTk3MDAyMy4xNjUxNDk4Mzgx*_ga_DC35J2X53F*MTY1MTY5NzAxOC4xNC4xLjE2NTE2OTk3MTMuMg.. page.
+
+2.Navigate to bottom of the page and fing ""For information on exchange shipping, please click here.""
+3.Click on ""here"" link.
+
+**Expected result:**
+User should be taken to new page with appropriate content.
+
+**Actual result:**
+""The page you were looking for doesn't exist"" message is displayed.",(orange),sanel52,,1,https://trello.com/1/cards/6272f31d0934a22adb54045a/attachments/6272f32b89d4bb765412200a/download/image.png,0,0,0,0,2022-05-07T15:30:39.205Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,false,To do,Medium,High,3
+6272f06b2be359359fd3fa06,Link is not working,https://trello.com/c/MCRDiSfc/6-link-is-not-working,"**Prerequisites: **
+
+Network connection. User should be logged in.
+
+**Description:**
+User navigates to specific page and when clicking on specific support link, that page is not provided.
+
+**Steps to reproduce:**
+
+1.Go to  https://pangaia.com/pages/returns-and-exchanges?_gl=1*1mt8sd6*_ga*MTAzOTk3MDAyMy4xNjUxNDk4Mzgx*_ga_DC35J2X53F*MTY1MTY5NzAxOC4xNC4xLjE2NTE2OTk3MTMuMg.. page.
+
+2.Navigate to bottom of the page and fing ""For information on exchange shipping, please click here.""
+3.Click on ""here"" link.
+
+**Expected result:**
+User should be taken to new page with appropriate content.
+
+**Actual result:**
+""The page you were looking for doesn't exist"" message is displayed.",(orange),sanel52,,2,"https://trello.com/1/cards/6272f06b2be359359fd3fa06/attachments/6272f089e439298987ec94ea/download/image.png, https://trello.com/1/cards/6272f06b2be359359fd3fa06/attachments/6272f28cb6661376f14541fb/download/image.png",0,0,0,0,2022-05-04T21:39:42.211Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,false,To do,Medium,High,3
+6272ed8c70202a3cb3c46461,User subscribes with fake and inappropriate data.,https://trello.com/c/ouBKUMY5/5-user-subscribes-with-fake-and-inappropriate-data,"**Prerequisites: **
+
+Network connection.
+
+**Description:**
+User navigates to a bottom of Science page and subscribes to ""Pangaia"" site with invalid data.
+
+**Steps to reproduce:**
+
+1.Go to “https://pangaia.com/ page.
+
+2.Select a Science tab and go to bottom of the page.
+
+2.Fill in email section with ""22@22"" fake email data.
+3.Select a name and type in ""!"" sign.
+4.Click Subscribe button.
+
+**Expected result:
+User should not be able to subscribe with invalid and inpropriate data.
+
+**Actual result:**
+User is subscribed to ""Pangaia"" page. ""Thanks for subscribing"" message is displayed on the screen.",(orange),sanel52,,2,"https://trello.com/1/cards/6272ed8c70202a3cb3c46461/attachments/6272ed9e2286032092079f07/download/image.png, https://trello.com/1/cards/6272ed8c70202a3cb3c46461/attachments/6272eda730586f65109878fa/download/image.png",0,0,0,0,2022-05-07T15:46:27.584Z,6271b9e04c5bbe6e81513cee,Done,6271b9e04c5bbe6e81513cec,sd,false,To do,Low,High,3
+6271c7b2b04e6750002fc903,Proceeded with wrong data.,https://trello.com/c/QvRdrGwo/4-proceeded-with-wrong-data,User ,(red),sanel52,,1,https://trello.com/1/cards/6271c7b2b04e6750002fc903/attachments/6271c7b2b04e6750002fc927/download/image.png,0,0,0,0,2022-05-07T15:45:50.579Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,true,To do,Medium,Medium,2
+6271c597de252d2113532a13,Checking postal code input,https://trello.com/c/ASSSJWgy/3-checking-postal-code-input,"Prerequisites:
+
+Existing user account. User should be logged in to the page.
+
+Description:
+User selects specific round trip fllight for a specific period of time with 1 pasenger and economy class. Afther selecting a specific flight from available flights user proceeds for a booking and payment. By clicking on “Book now“ button “404 Error Page not Found“ error message is displayed. 
+
+Steps to reproduce:
+
+1.Go to “https://phptravels.net/“ page.
+
+2.Select a flight from Istanbul to Sarajevo, from 06.05.2022 to 09.05.2022 with  1 adults and economy class.
+
+2.Select search button.
+3.Select first flight in the list of available flights and click on Book now button.
+
+Expected result:
+User should proceed to a payement method page.
+
+Actual result:
+Error message “ button “404 Error Page not Found“ is displayed.",(red),sanel52,,2,"https://trello.com/1/cards/6271c597de252d2113532a13/attachments/6271c5ad5669a176eeb8aa4f/download/image.png, https://trello.com/1/cards/6271c597de252d2113532a13/attachments/6271c5b65f7e257befd39135/download/image.png",1,0,0,0,2022-05-04T00:15:50.770Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,false,To do,Medium,Medium,2
+6271be9a0af0c3297fc59caa,Proceeded with wrong data.,https://trello.com/c/pZ7TIhPU/2-proceeded-with-wrong-data,"Prerequisites:
+
+Existing user account. User should be logged in to the page.
+
+Description:
+User selects specific round trip fllight for a specific period of time with 1 pasenger and economy class. Afther selecting a specific flight from available flights user proceeds for a booking and payment. By clicking on “Book now“ button “404 Error Page not Found“ error message is displayed. 
+
+Steps to reproduce:
+
+1.Go to “https://phptravels.net/“ page.
+
+2.Select a flight from Istanbul to Sarajevo, from 06.05.2022 to 09.05.2022 with  1 adults and economy class.
+
+2.Select search button.
+3.Select first flight in the list of available flights and click on Book now button.
+
+Expected result:
+User should proceed to a payement method page.
+
+Actual result:
+Error message “ button “404 Error Page not Found“ is displayed.",(red),sanel52,,2,"https://trello.com/1/cards/6271be9a0af0c3297fc59caa/attachments/6271be9a0af0c3297fc59ccc/download/image.png, https://trello.com/1/cards/6271be9a0af0c3297fc59caa/attachments/6271be9a0af0c3297fc59cd5/download/image.png",1,1,0,0,2022-05-07T15:37:53.227Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,true,To do,Medium,Medium,2
+6271bbf2493b6d75b1d875b1,Point is not available,https://trello.com/c/gIDiNgON/1-point-is-not-available,"When clicking on a button to get us notified when a new order arrives, popup window shows up. But in that window senetences are written in missorder and font is too small.
+
+Steps to reproduce
+1. Go to Women page and select specific item.
+2. Select a size that is not currently available.
+3. Select ""Notify me"" button and check for a message.
+
+Expected result:
+A plain and right message should be displayed.
+Actual result:
+The font is too small and there is no any punctation. A point is missing between senetences.",(red),,,1,https://trello.com/1/cards/6271bbf2493b6d75b1d875b1/attachments/627692a89ee4647decae719c/download/image.png,0,0,0,0,2022-05-07T15:45:41.117Z,6271b9e04c5bbe6e81513ced,Doing,6271b9e04c5bbe6e81513cec,sd,false,To do,Lowest,Low,1
+6271b9e04c5bbe6e81513d1e,(Mobile) Optimize animations code,https://trello.com/c/pY5PisLp/9-mobile-optimize-animations-code,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-03T23:33:21.213Z,6271b9e04c5bbe6e81513ced,Doing,6271b9e04c5bbe6e81513cec,sd,true,,,,
+6271b9e04c5bbe6e81513d1c,Link navigates to an empty page.,https://trello.com/c/arUOtGDH/8-link-navigates-to-an-empty-page,"**Prerequisites: **
+
+Network connection.
+
+**Description:**
+User clicks on a specific link situated in details page of that item, afther that user is navigated to an empty page where no content is available.
+
+**Steps to reproduce:**
+
+1.Go to “https://pangaia.com/ page.
+
+2.Select a Men>Shorts>InStock>JadeGreen specific item. Afther this user is navigated to details page.
+
+2.Click on Details section in details page, select ""Find out more"" link  and click on it.
+
+**Expected result:
+User should proceed to a specific details page.
+
+**Actual result:**
+No information is provided. ""This site can’t be reached"" error is displayed.",(orange),sanel52,,2,"https://trello.com/1/cards/6271b9e04c5bbe6e81513d1c/attachments/6272e7a710db2f296ee73e63/download/image.png, https://trello.com/1/cards/6271b9e04c5bbe6e81513d1c/attachments/6272e8c7cdeceb508955f335/download/image.png",0,0,0,0,2022-05-04T20:57:43.832Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,false,To do,Medium,High,3
+6271b9e04c5bbe6e81513d1a,(Web) Optimize VM usage with better service divisions among them,https://trello.com/c/egsKGkIt/7-web-optimize-vm-usage-with-better-service-divisions-among-them,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-03T23:25:20.384Z,6271b9e04c5bbe6e81513cef,Deployment & Infrastructure,6271b9e04c5bbe6e81513cec,sd,false,,,,
+6271b9e04c5bbe6e81513d18,(Web) Improve load time for main user page,https://trello.com/c/ShacqhQR/6-web-improve-load-time-for-main-user-page,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-04T21:26:30.458Z,6271b9e04c5bbe6e81513cee,Done,6271b9e04c5bbe6e81513cec,sd,true,,,,
+6271b9e04c5bbe6e81513d16,(Web) Start moving towards React.js,https://trello.com/c/zWpvf7ji/5-web-start-moving-towards-reactjs,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-03T23:36:09.029Z,6271b9e04c5bbe6e81513cee,Done,6271b9e04c5bbe6e81513cec,sd,true,,,,
+6271b9e04c5bbe6e81513d14,(Mobile) Improve REST client so it's more modular,https://trello.com/c/w5MaRK8I/4-mobile-improve-rest-client-so-its-more-modular,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-03T23:36:05.173Z,6271b9e04c5bbe6e81513ced,Doing,6271b9e04c5bbe6e81513cec,sd,true,,,,
+6271b9e04c5bbe6e81513d12,(Backend) Move login sessions from DB to Redis,https://trello.com/c/ojDoIndy/3-backend-move-login-sessions-from-db-to-redis,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-03T23:33:25.595Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,true,,,,
+6271b9e04c5bbe6e81513d10,(Backend) Refactor photo related tables to support other media types and metadata,https://trello.com/c/evUwhO6x/2-backend-refactor-photo-related-tables-to-support-other-media-types-and-metadata,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-04T00:14:59.602Z,6271b9e04c5bbe6e81513ceb,To do,6271b9e04c5bbe6e81513cec,sd,true,,,,
+6271b9e04c5bbe6e81513d0e,(Web) Move to Docker based deployment,https://trello.com/c/M2hhpIfi/1-web-move-to-docker-based-deployment,,Tech Debt (blue),,,0,,0,0,0,0,2022-05-03T23:25:20.344Z,6271b9e04c5bbe6e81513cef,Deployment & Infrastructure,6271b9e04c5bbe6e81513cec,sd,false,,,,
